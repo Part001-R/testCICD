@@ -16,8 +16,8 @@ jobs:
                 go-version: 1.24
             - name: Checkout
               uses: actions/Checkout@v4
-            - name: Depends tidy
-              run: go mod tidy
+            - name: Show ls
+              run: ls -la
             - name: Build
               working-directory: cmd/client
               run: go build -v -o client main.go
@@ -31,8 +31,6 @@ jobs:
                 go-version: 1.24
             - name: Checkout
               uses: actions/Checkout@v4
-            - name: Depends tidy
-              run: go mod tidy
             - name: Build
               working-directory: cmd/server
               run: go build -v -o server main.go

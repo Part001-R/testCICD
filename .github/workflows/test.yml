@@ -18,7 +18,7 @@ jobs:
               uses: actions/Checkout@v4
             - name: Build
               working-directory: cmd/client
-              run: go build -v -o client .
+              run: go build -v -o client main.go
 
     build_server:
         runs-on: ubuntu-latest
@@ -31,7 +31,7 @@ jobs:
               uses: actions/Checkout@v4
             - name: Build
               working-directory: cmd/server
-              run: go build -v -o server .
+              run: go build -v -o server main.go
     
     lint_client:
         needs: build_client

@@ -16,8 +16,6 @@ jobs:
                 go-version: 1.24
             - name: Checkout
               uses: actions/Checkout@v4
-            - name: Show ls
-              run: ls -la
             - name: Build
               working-directory: cmd/client
               run: go build -v -o client main.go
@@ -94,4 +92,5 @@ jobs:
               uses: actions/Checkout@v4
             - name: Test
               run: go test -race -v ./...
+
 
